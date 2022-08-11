@@ -158,7 +158,7 @@ function updateProgress(e) {
     
      const nf2 = (nf1 * 60) / 100
      
-     if (nf2 == 42 ) {
+     if (nf2.toFixed(0) == 4 ) {
     maxminutes.innerHTML = "0" + n1 + ":" + nf2.toFixed(0) + '0'; 
      } else {
         maxminutes.innerHTML = "0" + n1 + ":" + nf2.toFixed(0); 
