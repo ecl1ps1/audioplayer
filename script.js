@@ -27,11 +27,44 @@ const songs = ['Монеточка - Gachий Раз REMAKE ♂', 'Серёга 
 
 let songIndex = 0
 
+            
+
 function loadSong(song) {
     title.innerHTML = song
     audio.src = `source/audio/${song}.mp3`
+    const { duration } = audio.srcElement || 0
+    console.log(duration)
+    const MaxTimeofsong = document.getElementById("maxtime") || 0; 
+    const roundtime = duration || 0
+    const nf  = (roundtime ) / 60 || 0
+    const n1  = Math.floor(nf || 0)
+    const maxminutes = document.getElementById("maxtime") || 0;
+    const nf1 = Number(nf.toFixed(2).toString().split('.')[1]);
+     const nf2 = (nf1 * 60) / 100 || 0
+     if (nf2 == 42 ) {
+    maxminutes.innerHTML = "0" + n1 || 0 + ":" + nf2.toFixed(0)|| 0 + '0'; 
+     } else {
+        maxminutes.innerHTML = "0" + n1 || 0 + ":" + nf2.toFixed(0)  || 0; 
+     }
 }
 loadSong(songs[songIndex])
+
+const { duration } = audio.srcElement || 0
+    const MaxTimeofsong = document.getElementById("maxtime");
+    const roundtime = duration
+    const nf = (roundtime ) / 60
+    const n1 = Math.floor(nf)
+    const maxminutes = document.getElementById("maxtime");
+    const nf1 = Number(nf.toFixed(2).toString().split('.')[1]);
+     const nf2 = (nf1 * 60) / 100
+     if (nf2 == 42 ) {
+    maxminutes.innerHTML = "0" + n1 + ":" + nf2.toFixed(0) + '0'; 
+     } else {
+        maxminutes.innerHTML = "0" + n1 + ":" + nf2.toFixed(0); 
+     }
+
+audio.volume = 1
+volume.style.width = `150px`
 
 function playSong() {
     check.classList.add('play')
@@ -206,4 +239,20 @@ function setprogressd(e) {
 }
 
 volumecontainer.addEventListener('click', setprogressd)
+
+function checkmaxtime() {
+    const {duration, currentTime} = e.srcElement  || 0
+    const MaxTimeofsong = document.getElementById("maxtime");
+    const roundtime = duration
+    const nf = (roundtime) / 60
+    const n1 = Math.floor(nf)
+    const maxminutes = document.getElementById("maxtime");
+    const nf1 = Number(nf.toFixed(2).toString().split('.')[1]) || 0
+     const nf2 = (nf1 * 60) / 100  || 0
+     if (nf2 == 42 ) {
+    maxminutes.innerHTML = "0" + n1 || 0 + ":" + nf2.toFixed(0) || 0 + '0'; 
+     } else {
+        maxminutes.innerHTML = "0" +  + ":" + nf2.toFixed(0) || 0; 
+     }
+}
 
