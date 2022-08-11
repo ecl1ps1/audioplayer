@@ -1,3 +1,349 @@
+@media screen and (max-width: 2500px) {
+    .headname {
+        position: fixed;
+        left: 500px;
+        top: 400px;
+        width: 820px;
+    }
+    .buttons {
+        margin-left: 200px;
+    }
+
+    .song {
+        position: fixed;
+        margin-top: 300px;
+        left: 560px;
+        font-size: 33px;
+    }
+    .progress_container 
+{
+   /* margin-top: 90px;*/
+    height: 5px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: #5E5E5E;
+    cursor: pointer; 
+    display: flex;
+    position: fixed;
+    left: 550px;
+    top: 400px;
+}
+.volume_container 
+{
+    margin-top: 50px;
+    height: 5px;
+    margin-left: 40;
+    width:200px;
+    border-radius: 5px;
+    background-color: #5E5E5E;
+    display: flex;
+    cursor: pointer;
+    position: fixed;
+    top: 390px;
+    left: 1100px; 
+}
+.volume_btn 
+{
+    position: fixed;
+    top: 427px;
+    left: 1065px;
+   
+    cursor:pointer;
+}
+
+.max_time 
+{
+    font-family:cursive;
+    position: fixed;
+    top: 450px;
+    left: 960px;
+    font-size: 13;
+}
+
+.timer 
+{
+    font-family:cursive;
+    position: fixed;
+    top: 450px;
+    left: 499px;
+    font-family: cursive;
+    font-size: 13;
+}
+} 
+
+@media screen and (max-width: 1278px) {
+    .headname {
+        position: fixed;
+        left: 300px;
+        top: 400px;
+        width: 520px;
+    }
+    .buttons {
+        margin-left: 150px;
+    }
+
+    .song {
+        position: fixed;
+        margin-top: 300px;
+        left: 260px;
+        font-size: 32px;
+    }
+    .progress_container 
+{
+   /* margin-top: 90px;*/
+    height: 5px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #5E5E5E;
+    cursor: pointer; 
+    display: flex;
+    position: fixed;
+    left: 400px;
+    top: 400px;
+}
+.volume_container 
+{
+    margin-top: 50px;
+    height: 5px;
+    margin-left: 40;
+    width:110px;
+    border-radius: 5px;
+    background-color: #5E5E5E;
+    display: flex;
+    cursor: pointer;
+    position: fixed;
+    top: 390px;
+    left: 700px; 
+}
+.volume_btn 
+{
+    position: fixed;
+    top: 427px;
+    left: 670px;
+   
+    cursor:pointer;
+}
+
+.max_time 
+{
+    font-family:cursive;
+    position: fixed;
+    top: 450px;
+    left: 610px;
+    font-size: 13;
+}
+
+.timer 
+{
+    font-family:cursive;
+    position: fixed;
+    top: 450px;
+    left: 352px;
+    font-family: cursive;
+    font-size: 13;
+}
+
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 998px) {
+    .headname {
+        position: fixed;
+        left: 200px;
+        top: 400px;
+        width: 520px;
+    }
+    .buttons {
+        margin-left: 100px;
+    }
+
+    .song {
+        position: fixed;
+        margin-top: 300px;
+        left: 170px;
+    }
+    .progress_container 
+{
+   /* margin-top: 90px;*/
+    height: 5px;
+    border-radius: 5px;
+    background-color: #5E5E5E;
+    cursor: pointer; 
+    display: flex;
+    position: fixed;
+    left: 260px;
+    top: 400px;
+}
+.volume_container 
+{
+    margin-top: 50px;
+    height: 5px;
+    margin-left: 40;
+    width:130px;
+    border-radius: 5px;
+    background-color: #5E5E5E;
+    display: flex;
+    cursor: pointer;
+    position: fixed;
+    top: 390px;
+    left: 570px; 
+}
+.volume_btn 
+{
+    position: fixed;
+    top: 427px;
+    left: 540px;
+   
+    cursor:pointer;
+}
+
+.max_time 
+{
+    font-family:cursive;
+    position: fixed;
+    top: 450px;
+    left: 470px;
+    font-size: 13;
+}
+
+.timer 
+{
+    font-family:cursive;
+    position: fixed;
+    top: 450px;
+    left: 212px;
+    font-family: cursive;
+    font-size: 13;
+}
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+    .headname {
+        left: 150px;
+        width: 430px;
+    }
+
+    .song {
+        position: fixed;
+        font-size:22px;
+        left: 130px;
+        top: 40px;
+    }
+
+    .progress_container {
+        left: 200px;
+    }
+
+    .timer {
+        left: 150px;
+    }
+
+    .max_time {
+        left: 410px;
+    }
+
+    .volume_container {
+        left: 499px;
+        width: 74px;
+    }
+
+    .volume_btn {
+        left: 470px;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 576px) {
+    .headname {
+        width: 390px;
+        left: 40px;
+    }
+
+    .song {
+        left: 20px;
+        font-size: 22px;
+    }
+
+    .progress_container {
+        left: 100px;
+    }
+
+    .buttons {
+        margin-left: 100px;
+    }
+
+    .timer {
+        left: 50px;
+    }
+
+    .max_time {
+        left: 306px;
+    }
+
+    .volume_container {
+        left: 350px;
+    }
+
+    .volume_btn {
+        left: 320px;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 375px) {
+    .song {
+        font-size:17px ;
+        left: 20px;
+        top: 50px;
+    }
+    .headname {
+        position: fixed;
+        left: 20px;
+        width: 300px;
+    }
+
+    .buttons {
+        margin-left: 30px;
+        width: 10px;
+    }
+
+    .timer {
+        font-size: 14px;
+        top: 452px;
+        left: 31px;
+    }
+
+    .progress_container {
+        width: 100px;
+        left: 70px;
+    }
+
+    .max_time {
+        left: 173px;
+    }
+    .buttons {
+        margin-left: 30px;
+        width: 10px;
+    }
+
+    .volume_container {
+        left: 246px;
+    }
+
+    .volume_btn {
+        left: 220px;
+    }
+}
+
+
+
+/* -------------------------------------------------------------------------------------------------*/
+
 body 
 {
     height: 100vh;
@@ -8,45 +354,34 @@ body
 .headname
 {
     background-color: #181818;
-    position: relative;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
     align-self: center;
-    width: 720px;
+
     color: #FFFFFF;
     height:80px;
-    max-width: 1000px;
-    min-width: 100px;
     border: 5px  #282828;
     outline: rgb(0, 0, 0) solid 2px;
-    position:fixed;
-    left: 450px;
-    top: 400px;
     border-radius: 5px;
+
+
 }
 
 .song 
 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 5px;   
-    font-size: 33px;
-    margin-top: 40px;
+  /*  font-size: 33px; */
     text-align: center;
     color: #FFFFFF;
-    position: fixed;
-    top: 300px;
-    left: 580px;
 }
 
 .buttons 
 {
-    width: 0px;
+    width: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 150px;
-    margin-top: 5px;
     cursor: pointer;
 }
 
@@ -70,14 +405,10 @@ body
 {
     margin-top: 60px;
     height: 5px;
-    width: 350px;
     border-radius: 5px;
     background-color: #5E5E5E;
     cursor: pointer; 
     display: flex;
-    position: fixed;
-    top: 400px;
-    left: 600px;
 }
 
 .progress 
@@ -99,14 +430,10 @@ body
     margin-top: 50px;
     height: 5px;
     margin-left: 40;
-    width:150px;
     border-radius: 5px;
     background-color: #5E5E5E;
     display: flex;
     cursor: pointer;
-    position: fixed;
-    top: 390px;
-    left: 1070px; 
 }
 
 #volume 
@@ -127,9 +454,6 @@ body
 
 .volume_btn 
 {
-    position: fixed;
-    top: 427px;
-    left: 1040px;
    
     cursor:pointer;
 }
@@ -141,21 +465,16 @@ body
 
 }
 
+
 .max_time 
 {
     font-family:cursive;
-    position: fixed;
-    top: 450px;
-    left: 955px;
     font-size: 13;
 }
 
 .timer 
 {
     font-family:cursive;
-    position: fixed;
-    top: 450px;
-    left: 552px;
     font-family: cursive;
     font-size: 13;
 }
