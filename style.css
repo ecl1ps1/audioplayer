@@ -4,7 +4,7 @@
     }
     .buttons {
         margin-top: 20px;
-        margin-left:310px;
+        margin-left:300px;
     }
 
     .buttons img {
@@ -35,11 +35,15 @@
     border-radius: 5px;
     background-color: #5E5E5E;
     cursor: pointer;
+    top: 0px;
+    left: 600px;
 }
 .volume_btn 
 {
    
     cursor:pointer;
+    top: 36px;
+    left: 567px;
 }
 
 .max_time 
