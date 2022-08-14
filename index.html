@@ -25,10 +25,11 @@
            
     </div>
     <div id="progress" class="progress_container">
-        <div class="progress"></div></div>
+        <input class="progresss" type="range" min="0" max="100" step="1" value="0" onchange="seekTo()"> 
+      <!--  <div class="progress"></div>--></div> 
         <div class="volume_container">
-            
-            <div id="volume" class="volumed" ></div>
+            <input id="volume" class="volumedd" type="range" min="0" max="100" step="1" value="80" onchange="setVolume()"> 
+            <!--<div id="volume" class="volumed" ></div>-->
             
     </div>
     <div  class="volume_btn"><img class="volume_src" src="source/images/soundon.png" alt="" width="30px"></div>

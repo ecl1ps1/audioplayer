@@ -13,58 +13,26 @@ const   player = document.querySelector('.headname'),
         volumeSrc = document.querySelector('.volume_src'),
         check = document.querySelector('.check'),
         checkVl = document.querySelector('.checkVl'),
-         
+        progresss = document.querySelector('.progresss'),
+        volumee = document.querySelector('.volumedd'),
         maxtimesong = document.querySelector('.max_time'),
         imgSrc = document.querySelector('.play_src')
             var timerss = document.getElementById("secondss");
             var minutes = document.getElementById("minutes");
 
-            if (volume.style.width = 0) {
-                volumeOff()
-            }
-
 const songs = ['Монеточка - Gachий Раз REMAKE ♂', 'Серёга - Черный бумер', 'Face - В новых адиках Gachi Remix',  'Gachi - Парикмахер дядя Толик (right version)', 'GachiBasser - FACE - Рэйман (Right version)', 'Gachimuchi - Angry Boys', 'Gachimuchi - Barbie Van', 'Kavinsky Nightcall (Right version)',      ]
 
 let songIndex = 0
 
-            
+
 
 function loadSong(song) {
     title.innerHTML = song
     audio.src = `source/audio/${song}.mp3`
-    const { duration } = audio.srcElement || 0
-    console.log(duration)
-    const MaxTimeofsong = document.getElementById("maxtime") || 0; 
-    const roundtime = duration || 0
-    const nf  = (roundtime ) / 60 || 0
-    const n1  = Math.floor(nf || 0)
-    const maxminutes = document.getElementById("maxtime") || 0;
-    const nf1 = Number(nf.toFixed(2).toString().split('.')[1]);
-     const nf2 = (nf1 * 60) / 100 || 0
-     if (nf2 == 42 ) {
-    maxminutes.innerHTML = "0" + n1 || 0 + ":" + nf2.toFixed(0)|| 0 + '0'; 
-     } else {
-        maxminutes.innerHTML = "0" + n1 || 0 + ":" + nf2.toFixed(0)  || 0; 
-     }
 }
 loadSong(songs[songIndex])
 
-const { duration } = audio.srcElement || 0
-    const MaxTimeofsong = document.getElementById("maxtime");
-    const roundtime = duration
-    const nf = (roundtime ) / 60
-    const n1 = Math.floor(nf)
-    const maxminutes = document.getElementById("maxtime");
-    const nf1 = Number(nf.toFixed(2).toString().split('.')[1]);
-     const nf2 = (nf1 * 60) / 100
-     if (nf2 == 42 ) {
-    maxminutes.innerHTML = "0" + n1 + ":" + nf2.toFixed(0) + '0'; 
-     } else {
-        maxminutes.innerHTML = "0" + n1 + ":" + nf2.toFixed(0); 
-     }
 
-audio.volume = 1
-volume.style.width = `150px`
 
 function playSong() {
     check.classList.add('play')
@@ -93,16 +61,14 @@ function volumeOn() {
     player.classList.add('vlOnn')
     audio.volume = 0;
     volumeSrc.src = '/source/images/soundoff.png'
-  //  volume.removeAttribute('id');
-  volume.style.width = "0px"
+  volumee.value = 0;
 } 
 
 function volumeOff() {
     player.classList.remove('vlOnn')
     audio.volume = 1;
-   // volume.setAttribute('id', 'volume')
     volumeSrc.src = './source/images/soundon.png'
-    volume.style.width = "150px"
+    volumee.value = 50;
 }
 
 volumeBtn.addEventListener('click', () => {
@@ -164,7 +130,7 @@ function updateProgress(e) {
      } else {
         maxminutes.innerHTML = "0" + n1 + ":" + secondsmax || 00   ; 
      }
-    progress.style.width = `${progressPercent}%`
+    progresss.value = progressPercent
     const current = audio.currentTime
 
 
@@ -218,8 +184,8 @@ function updateProgress(e) {
 audio.addEventListener('timeupdate', updateProgress)
 
 function setprogress(e) {
-    const width = this.clientWidth
-    const clickX = e.offsetX 
+    const width = 100;
+    const clickX = progresss.value
     const duration = audio.duration
     audio.currentTime = (clickX / width) * duration
 
@@ -233,10 +199,8 @@ audio.addEventListener('ended', next)
 
 function setprogressd(e) {
     volumeSrc.src = './source/images/soundon.png'
-    const width = this.clientWidth
-    const clickX = e.offsetX 
-    audio.volume = (clickX / width)
-    volume.style.width = `${clickX}px`
+    audio.volume = volumee.value / 100;
+
 }
 
 volumecontainer.addEventListener('click', setprogressd)
@@ -256,4 +220,5 @@ function checkmaxtime() {
         maxminutes.innerHTML = "0" +  + ":" + nf2.toFixed(0) || 0; 
      }
 }
+
 

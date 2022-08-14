@@ -19,12 +19,12 @@
     .progress_container 
 {
     height: 5px;
-    width: 710px;
+    width: 700px;
     border-radius: 5px;
     background-color: #5E5E5E;
     cursor: pointer; 
     top: 100px;
-    left: 54px;
+    left: 64px;
 }
 .volume_container 
 {
@@ -51,7 +51,7 @@
     font-family:cursive;
     font-size: 13;
     top: 90px;
-    left: 770px;
+    left: 775px;
 }
 
 .timer 
@@ -389,11 +389,17 @@ body
 
 .progress 
     {
-        margin-left: 1px;
+        
+        margin-left: 11px;
         background-color:#FFFFFF;
         border-radius: 5px;
         height: 5px;
         width: 0px;
+        position: fixed;
+        left: 47px;
+        top: 98px;
+        cursor: pointer;
+        color: #FFFFFF !important;
     }
     
 .next
@@ -414,10 +420,14 @@ body
 
 #volume 
     {
-        margin-left: 1px;
+        
         background-color:#FFFFFF;
         border-radius: 5px;
         height: 5px;
+        position: fixed;
+        top: 48px;
+        left: 597px;
+        cursor: pointer;
     }
 
 .play 
@@ -451,4 +461,56 @@ body
     font-family:cursive;
     font-size: 13;
     position: fixed;
+}
+
+.progresss,
+.volumedd{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background:#FFFFFF;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.progresss::-webkit-slider-thumb, 
+.volumedd::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    width: 15px;
+    height: 15px;
+    background:#181818;
+    border: 3px solid #5E5E5E;
+    cursor: pointer;
+    border-radius:100%;
+}
+
+.progresss:hover,
+.volemedd:hover {
+    opacity: 1.0;
+}
+
+.progresss{
+    width: 86%;
+    margin-left: 11px;
+    background-color:#FFFFFF;
+    border-radius: 5px;
+    position: fixed;
+    left: 47px;
+    top: 98px;
+    cursor: pointer;
+    color: #FFFFFF !important;
+}
+
+.volumedd{
+    width: 25%;
+    background-color:#FFFFFF;
+    border-radius: 5px;
+    height: 5px;
+    position: fixed;
+    top: 48px;
+    left: 597px;
+    cursor: pointer;
 }
