@@ -150,18 +150,19 @@ function updateProgress(e) {
     const progressPercent = ( currentTime / duration ) * 100
     var MaxTimeofsong = document.getElementById("maxtime");
     const roundtime = duration
-    var nf = (roundtime) / 60
-    var n1 = Math.floor(nf)
+    var nf = (roundtime) / 60 || 00
+    var n1 = Math.floor(nf) || 00
     var maxminutes = document.getElementById("maxtime");
-    const result = nf.toString().split(',')
-    const nf1 = Number(nf.toFixed(2).toString().split('.')[1]);
+    const result = nf.toString().split(',') || 00
+    const nf1 = Number(nf.toFixed(2).toString().split('.')[1]) || 00;
     
-     const nf2 = (nf1 * 60) / 100
+     const nf2 = (nf1 * 60) / 100 || 00
+     const secondsmax = nf2.toFixed(0)
      
      if (nf2.toFixed(0) == 4 ) {
-    maxminutes.innerHTML = "0" + n1 + ":" + nf2.toFixed(0) + '0'; 
+    maxminutes.innerHTML = "0" + n1  + ":" + nf2.toFixed(0) + '0'; 
      } else {
-        maxminutes.innerHTML = "0" + n1 + ":" + nf2.toFixed(0); 
+        maxminutes.innerHTML = "0" + n1 + ":" + secondsmax || 00   ; 
      }
     progress.style.width = `${progressPercent}%`
     const current = audio.currentTime

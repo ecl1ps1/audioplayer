@@ -1,32 +1,30 @@
 @media screen and (max-width: 2500px) {
     .headname {
-        position: fixed;
-        left: 500px;
-        top: 400px;
         width: 820px;
     }
     .buttons {
-        margin-left: 200px;
+        margin-top: 20px;
+        margin-left:310px;
+    }
+
+    .buttons img {
+        width: 50px;
+        height: 50px;
     }
 
     .song {
-        position: fixed;
-        margin-top: 300px;
-        left: 560px;
-        font-size: 33px;
+        font-size: 34px;
+        bottom: 150px;
     }
     .progress_container 
 {
-   /* margin-top: 90px;*/
     height: 5px;
-    width: 400px;
+    width: 710px;
     border-radius: 5px;
     background-color: #5E5E5E;
     cursor: pointer; 
-    display: flex;
-    position: fixed;
-    left: 550px;
-    top: 400px;
+    top: 100px;
+    left: 54px;
 }
 .volume_container 
 {
@@ -36,17 +34,10 @@
     width:200px;
     border-radius: 5px;
     background-color: #5E5E5E;
-    display: flex;
     cursor: pointer;
-    position: fixed;
-    top: 390px;
-    left: 1100px; 
 }
 .volume_btn 
 {
-    position: fixed;
-    top: 427px;
-    left: 1065px;
    
     cursor:pointer;
 }
@@ -54,28 +45,22 @@
 .max_time 
 {
     font-family:cursive;
-    position: fixed;
-    top: 450px;
-    left: 960px;
     font-size: 13;
+    top: 90px;
+    left: 770px;
 }
 
 .timer 
 {
     font-family:cursive;
-    position: fixed;
-    top: 450px;
-    left: 499px;
-    font-family: cursive;
     font-size: 13;
+    top: 90px;
+    left: 6px;
 }
 } 
 
 @media screen and (max-width: 1278px) {
     .headname {
-        position: fixed;
-        left: 300px;
-        top: 400px;
         width: 520px;
     }
     .buttons {
@@ -254,45 +239,6 @@
         left: 470px;
     }
 }
-
-/* -------------------------------------------------------------------------------------------------*/
-
-@media screen and (max-width: 576px) {
-    .headname {
-        width: 390px;
-        left: 40px;
-    }
-
-    .song {
-        left: 20px;
-        font-size: 22px;
-    }
-
-    .progress_container {
-        left: 100px;
-    }
-
-    .buttons {
-        margin-left: 100px;
-    }
-
-    .timer {
-        left: 50px;
-    }
-
-    .max_time {
-        left: 306px;
-    }
-
-    .volume_container {
-        left: 350px;
-    }
-
-    .volume_btn {
-        left: 320px;
-    }
-}
-
 /* -------------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 375px) {
@@ -344,6 +290,10 @@
 
 /* -------------------------------------------------------------------------------------------------*/
 
+
+
+/* -------------------------------------------------------------------------------------------------*/
+
 body 
 {
     height: 100vh;
@@ -351,20 +301,22 @@ body
     background-color:#282828;
 }
 
+.audioplayer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .headname
 {
     background-color: #181818;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-
     color: #FFFFFF;
     height:80px;
     border: 5px  #282828;
     outline: rgb(0, 0, 0) solid 2px;
     border-radius: 5px;
-
-
+    height: 120px;
 }
 
 .song 
@@ -374,6 +326,7 @@ body
   /*  font-size: 33px; */
     text-align: center;
     color: #FFFFFF;
+    position: fixed;
 }
 
 .buttons 
@@ -383,6 +336,7 @@ body
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    position: fixed;
 }
 
 .next:hover {
@@ -403,12 +357,12 @@ body
 
 .progress_container 
 {
-    margin-top: 60px;
     height: 5px;
     border-radius: 5px;
     background-color: #5E5E5E;
     cursor: pointer; 
-    display: flex;
+    position: fixed;
+   /* display: flex; */
 }
 
 .progress 
@@ -417,7 +371,7 @@ body
         background-color:#FFFFFF;
         border-radius: 5px;
         height: 5px;
-     
+        width: 0px;
     }
     
 .next
@@ -429,11 +383,11 @@ body
 {
     margin-top: 50px;
     height: 5px;
-    margin-left: 40;
     border-radius: 5px;
     background-color: #5E5E5E;
-    display: flex;
+ /*   display: flex; */
     cursor: pointer;
+    position: fixed;
 }
 
 #volume 
@@ -442,8 +396,6 @@ body
         background-color:#FFFFFF;
         border-radius: 5px;
         height: 5px;
-     /*   width: 150px;*/
-       
     }
 
 .play 
@@ -454,15 +406,14 @@ body
 
 .volume_btn 
 {
-   
     cursor:pointer;
+    position: fixed;
 }
 
 .time 
 {
     color: #9F9F9F;
-    
-
+    position: fixed;
 }
 
 
@@ -470,11 +421,12 @@ body
 {
     font-family:cursive;
     font-size: 13;
+    position: fixed;
 }
 
 .timer 
 {
     font-family:cursive;
-    font-family: cursive;
     font-size: 13;
+    position: fixed;
 }
