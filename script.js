@@ -12,45 +12,42 @@ const   player = document.querySelector('.headname'),
         title = document.querySelector('.song'),
         volumeSrc = document.querySelector('.volume_src'),
         check = document.querySelector('.check'),
-        checkVl = document.querySelector('.checkVl'),
         progresss = document.querySelector('.progresss'),
         volumee = document.querySelector('.volumedd'),
         maxtimesong = document.querySelector('.max_time'),
         imgSrc = document.querySelector('.play_src')
-            var timerss = document.getElementById("secondss");
-            var minutes = document.getElementById("minutes");
+            const timerss = document.getElementById("secondss");
+            const minutes = document.getElementById("minutes");
+            let isPlay = false;
 
 const songs = ['Монеточка - Gachий Раз REMAKE ♂', 'Серёга - Черный бумер', 'Face - В новых адиках Gachi Remix',  'Gachi - Парикмахер дядя Толик (right version)', 'GachiBasser - FACE - Рэйман (Right version)', 'Gachimuchi - Angry Boys', 'Gachimuchi - Barbie Van', 'Kavinsky Nightcall (Right version)',      ]
 
 let songIndex = 0
 
-
-
 function loadSong(song) {
     title.innerHTML = song
     audio.src = `source/audio/${song}.mp3`
 }
+
 loadSong(songs[songIndex])
 
-
-
 function playSong() {
-    check.classList.add('play')
+    isPlay = true;
     audio.play()
     imgSrc.src = './source/images/newpause1.png'
 } 
 
 function pauseSong() {
-    check.classList.remove('play')
+    isPlay = false;
     audio.pause()
     imgSrc.src = './source/images/newstart1.png'
 
 }
 
 playBtn.addEventListener('click', () => {
-    const isplay = check.classList.contains('play')
-    if (isplay) {
-        pauseSong()
+    
+    if (isPlay) {
+        pauseSong() 
     } else 
     {
         playSong()
@@ -83,18 +80,15 @@ volumeBtn.addEventListener('click', () => {
 
 function next() {
     songIndex++;
-
     if(songIndex > songs.length - 1) {
         songIndex = 0;
     }
-
     loadSong(songs[songIndex])
     playSong()
 }
 
 function prev() {
     songIndex--
-
     if(songIndex < 0) {
         songIndex = songs.length - 1;
     }
@@ -114,25 +108,22 @@ prevBtn.addEventListener('click', () => {
 function updateProgress(e) {
     const {duration, currentTime} = e.srcElement
     const progressPercent = ( currentTime / duration ) * 100
-    var MaxTimeofsong = document.getElementById("maxtime");
+    const MaxTimeofsong = document.getElementById("maxtime");
     const roundtime = duration
-    var nf = (roundtime) / 60 || 00
-    var n1 = Math.floor(nf) || 00
-    var maxminutes = document.getElementById("maxtime");
+    const nf = (roundtime) / 60 || 00
+    const n1 = Math.floor(nf) || 00
+    const maxminutes = document.getElementById("maxtime");
     const result = nf.toString().split(',') || 00
     const nf1 = Number(nf.toFixed(2).toString().split('.')[1]) || 00;
-    
      const nf2 = (nf1 * 60) / 100 || 00
-     const secondsmax = nf2.toFixed(0)
-     
-     if (nf2.toFixed(0) == 4 ) {
+    const secondsmax = nf2.toFixed(0)
+    if (nf2.toFixed(0) == 4 ) {
     maxminutes.innerHTML = "0" + n1  + ":" + nf2.toFixed(0) + '0'; 
-     } else {
+    } else {
         maxminutes.innerHTML = "0" + n1 + ":" + secondsmax || 00   ; 
-     }
+    }
     progresss.value = progressPercent
     const current = audio.currentTime
-
 
     if (current.toFixed(0) < 10) {
         
@@ -188,7 +179,6 @@ function setprogress(e) {
     const clickX = progresss.value
     const duration = audio.duration
     audio.currentTime = (clickX / width) * duration
-
 }
 
 progresscontainer.addEventListener('click', setprogress)

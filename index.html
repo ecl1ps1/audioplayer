@@ -7,37 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="source/images/icon.png" type="image/x-icon">
-   
 </head>
 <body>
    <div class="audioplayer"> <div class="song">Монеточка - Gachий Раз REMAKE ♂</div>
-    
     <div class="headname">
-      
             <audio class="audio" src="./source/audio/Монеточка - Gachий Раз REMAKE ♂.mp3"></audio>
-           
             <div class="buttons">
                 <div class="prev" ><img src="source/images/prev1.png" height="30" alt=""></div>
                 <div id="play" class="btn play" ><img class="play_src" src="source/images/newstart1.png" height="40" alt="btn"></div>
                 <div class="next" ><img src="source/images/next1.png" height="30" alt=""></div>
-
-                </div>
-           
+            </div>
     </div>
     <div id="progress" class="progress_container">
         <input class="progresss" type="range" min="0" max="100" step="1" value="0" onchange="seekTo()"> 
-      <!--  <div class="progress"></div>--></div> 
+    </div> 
         <div class="volume_container">
             <input id="volume" class="volumedd" type="range" min="0" max="100" step="1" value="80" onchange="setVolume()"> 
-            <!--<div id="volume" class="volumed" ></div>-->
-            
-    </div>
-    <div  class="volume_btn"><img class="volume_src" src="source/images/soundon.png" alt="" width="30px"></div>
-        <div class="audioplayer"></div>
-       <div class="time"> <div id="timer" class="timer"><a id="minutes">00</a>:<a id="secondss">00</a></div>
+        </div>
+    <div class="volume_btn"><img class="volume_src" src="source/images/soundon.png" alt="" width="30px"></div>
+        <div class="time"> 
+        <div id="timer" class="timer"><a id="minutes">00</a>:<a id="secondss">00</a></div>
         <div id="maxtime" class="max_time">00:00</div> </div></div>
-    <div class="check"></div>
-    <div class="checkVl"></div>
     <script src="./script.js"></script>
 </body>
 </html>
